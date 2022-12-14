@@ -1,3 +1,4 @@
 nltk==3.8
 tqdm==4.64.1
 gensim==4.2.0
+Sastrawi==1.0.1
