@@ -12,4 +12,7 @@ def search():
         args_dict = request.args.to_dict()
         query = args_dict.get("q")
         tfidf = BSBI_instance.retrieve_tfidf(query, k = 10)
-        return jsonify(tfidf)
+        result = []
+        for (score, doc) in tfidf:
+                result.append(doc)
+        return jsonify(result)

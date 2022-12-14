@@ -3,6 +3,10 @@ import pickle
 import contextlib
 import heapq
 import time
+import math
+
+import nltk
+nltk.download('punkt')
 from nltk import word_tokenize
 
 from index import InvertedIndexReader, InvertedIndexWriter
