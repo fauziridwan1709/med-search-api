@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d7e651368075c6f90fd0a9fb18a6339e2cbb7ea57abc558721b3a43f0d9f8ab3"
+            "sha256": "05932b329d2142f17a6118c1ff4e10a48f05ba6247471e422b301bf0ddc81d8f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -318,6 +318,14 @@
             "markers": "python_version >= '3.6'",
             "version": "==2022.10.31"
         },
+        "sastrawi": {
+            "hashes": [
+                "sha256:62badb523e6e273f92eb6d53f5f3d4c0aa9ffcf1ceba69ab3dba5b7a0da02c56",
+                "sha256:ac3d1f442ae8f33fd0f59387eb33a1a5121241f028c318c60820f26bd032d93b"
+            ],
+            "index": "pypi",
+            "version": "==1.0.1"
+        },
         "scipy": {
             "hashes": [
                 "sha256:06d2e1b4c491dc7d8eacea139a1b0b295f74e1a1a0f704c375028f8320d16e31",
@@ -342,7 +350,7 @@
                 "sha256:da8245491d73ed0a994ed9c2e380fd058ce2fa8a18da204681f2fe1f57f98f95",
                 "sha256:fbc5c05c85c1a02be77b1ff591087c83bc44579c6d2bd9fb798bb64ea5e1a027"
             ],
-            "markers": "python_version >= '3.8'",
+            "index": "pypi",
             "version": "==1.9.3"
         },
         "setuptools": {
