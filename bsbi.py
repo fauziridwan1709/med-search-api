@@ -5,8 +5,6 @@ import heapq
 import time
 import math
 
-from nltk import word_tokenize
-
 from index import InvertedIndexReader, InvertedIndexWriter
 from util import IdMap, sorted_merge_posts_and_tfs
 from compression import StandardPostings, VBEPostings
@@ -99,7 +97,7 @@ class BSBIIndex:
                 sentence = file.read()
                 stemmed = stemmer.stem(sentence)
                 cleaned = stop_word_remover.remove(stemmed)
-                tokenized = word_tokenize(cleaned)
+                tokenized = cleaned.split(" ")
                 for token in tokenized:
                     term_id = self.term_id_map[token]
                     td_pairs.append((term_id, doc_id))
@@ -220,7 +218,7 @@ class BSBIIndex:
         stop_word_remover = StopWordRemoverFactory().create_stop_word_remover()
         stemmed = stemmer.stem(query)
         cleaned = stop_word_remover.remove(stemmed)
-        tokenized = word_tokenize(cleaned)
+        tokenized = cleaned.split(" ")
         list_of_postings_list = []
 
         with InvertedIndexReader(self.index_name, self.postings_encoding, self.output_dir) as index:
@@ -278,7 +276,7 @@ class BSBIIndex:
         stop_word_remover = StopWordRemoverFactory().create_stop_word_remover()
         stemmed = stemmer.stem(query)
         cleaned = stop_word_remover.remove(stemmed)
-        tokenized = word_tokenize(cleaned)
+        tokenized = cleaned.split(" ")
         list_of_postings_list = []
 
         with InvertedIndexReader(self.index_name, self.postings_encoding, self.output_dir) as index:
