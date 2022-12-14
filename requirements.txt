@@ -4,3 +4,4 @@ gensim==4.2.0
 Sastrawi==1.0.1
 scipy==1.9.3
 lightgbm==3.3.3
+Flask-Cors==3.0.10

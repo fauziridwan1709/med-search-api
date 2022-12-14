@@ -12,6 +12,7 @@ gensim = "*"
 sastrawi = "*"
 scipy = "*"
 lightgbm = "*"
+flask-cors = "*"
 
 [dev-packages]
 
