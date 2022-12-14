@@ -1,6 +1,15 @@
 from flask import Flask, jsonify, request
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from search import BSBI_instance
+import os
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+data_file = os.path.join(basedir, 'collection/')
+
+WORDS = []
+with open(data_file, "r") as file:
+    for line in file.readlines():
+        WORDS.append(line.rstrip())
  
 app = Flask(__name__)
 CORS(app)
